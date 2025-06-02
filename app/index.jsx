@@ -1,15 +1,24 @@
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
     <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      style={styles.container}
     >
-      <Text>Edit app/index.jsx to edit this screen!!!</Text>
+      <Text style={styles.text}>Edit app/index.jsx to edit this screen!!!</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: '#021123',
+  },
+
+  text: {
+    color: 'white',
+  }
+})
