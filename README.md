@@ -1,3 +1,8 @@
+## Dependências utilizadas
+npx create-expo-app@3 => criar o projeto (pode utilizar o => npx create-expo-app@latest <= para a ultima versão)
+
+npm reset-project => resetar o projeto, começar do zero
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
