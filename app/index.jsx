@@ -86,7 +86,7 @@ export default function Index() {
           <Timer totalSeconds={seconds}/>
           <FokusButton
             title={timerRunning ? 'Pausar' : 'Começar'}
-            icons={timerRunning ? <IconPause /> : <IconPlay />}
+            icon={timerRunning ? <IconPause /> : <IconPlay />}
             onPress={toggleTimer}
           />
       </View>
