@@ -1,4 +1,4 @@
-import { Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, Text, View, Pressable } from "react-native";
 
 export default function Index() {
   return (
@@ -6,7 +6,24 @@ export default function Index() {
       style={styles.container}
     >
       <Image source={require('./pomodoro.png')}/>
-      <View style={styles.actions}/>
+      <View style={styles.actions}>
+          <Text style={styles.timer}>
+            25:00
+          </Text>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>
+              Começar
+            </Text>
+          </Pressable>
+      </View>
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>
+          Projeto fictício sem fins lucrativos.
+        </Text>
+        <Text style={styles.footerText}>
+          Desenvolvido por Alura.
+        </Text>
+      </View>
     </View>
   );
 }
@@ -27,5 +44,31 @@ const styles = StyleSheet.create({
     borderRadius: 32,
     borderWidth: 2,
     borderColor: '#144480',
-  }
+    gap: 32,
+  },
+  timer: {
+    fontSize: 54,
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  button: {
+    backgroundColor: '#B872FF',
+    borderRadius: 32,
+    padding: 8,
+  },
+  buttonText: {
+    textAlign: 'center',
+    color: '#021123',
+    fontSize: 18,
+  },
+  footer: {
+    width: '80%',
+
+  },
+  footerText: {
+    textAlign: 'center',
+    color: '#98A0A8',
+    fontSize: 12.5,
+  },
 })
