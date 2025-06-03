@@ -2,6 +2,7 @@
 npx create-expo-app@3 => criar o projeto (pode utilizar o => npx create-expo-app@latest <= para a ultima versão)
 
 npm reset-project => resetar o projeto, começar do zero
+npx expo install react-native-sv 
 
 # Welcome to your Expo app 👋
 
