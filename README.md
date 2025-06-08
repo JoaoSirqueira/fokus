@@ -1,43 +1,20 @@
+# Bem-vindo ao projeto Fokus 👋
+
 ## Dependências utilizadas
-npx create-expo-app@3 => criar o projeto (pode utilizar o => npx create-expo-app@latest <= para a ultima versão)
 
-npm reset-project => resetar o projeto, começar do zero
-npx expo install react-native-sv 
-
-# Welcome to your Expo app 👋
-
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
-## Get started
-
-1. Install dependencies
-
+1. Instale as dependencias:
    ```bash
    npm install
+   npx expo install react-native-sv 
    ```
 
-2. Start the app
+2. Comandos que foram utilizados no projeto
 
    ```bash
-   npx expo start
+   npx create-expo-app@3
+   npm reset-project
+   npx expo install react-native-sv 
    ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
 
 ## Créditos
 
