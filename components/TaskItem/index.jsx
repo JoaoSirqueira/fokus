@@ -8,20 +8,24 @@ const TaskItem = ({
     onPressEdit,
     onPressDelete
 }) => {
-    return (
-        <View style={styles.card}>
-            <Pressable onPress={onToggleComplete}>
-                <IconCheck compelted={completed} />
-            </Pressable>
 
-            <Text  style={styles.text}>
+    const cardStyles = [styles.card];
+
+    if (completed) {
+        cardStyles.push(styles.cardCompleted)
+    }
+
+    return (
+        <View style={cardStyles}>
+            <Pressable onPress={onToggleComplete}>
+                <IconCheck checked={completed} />
+            </Pressable>
+            <Text style={styles.text}>
                 {text}
             </Text>
-
             <Pressable onPress={onPressEdit}>
                 <IconPencil />
             </Pressable>
-
             <Pressable onPress={onPressDelete}>
                 <IconTrash />
             </Pressable>
@@ -39,6 +43,9 @@ const styles = StyleSheet.create({
         paddingVertical: 18,
         borderRadius: 8,
         gap: 8,
+    },
+    cardCompleted: {
+        backgroundColor: '#0F725C',
     },
     text: {
         flex: 1,
