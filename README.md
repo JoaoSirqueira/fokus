@@ -14,6 +14,7 @@
    npx create-expo-app@3
    npm reset-project
    npx expo install react-native-sv 
+   npx expo install @react-navigation/drawer react-native-gesture-handler react-native-reanimated
    ```
 
 ## Créditos
