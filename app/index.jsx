@@ -5,7 +5,7 @@ import { useRouter } from "expo-router";
 
 export default function Index() {
   const router = useRouter();
-  
+
   return (
     <View style={styles.container}>
       <Image source={require('../assets/images/logo.png')} />
@@ -19,7 +19,7 @@ export default function Index() {
         <Image source={require('../assets/images/home.png')} />
         <FokusButton
           title="Quero iniciar!"
-          onPress={() => router.push('/pomodoro')}
+          onPress={() => router.replace('/pomodoro')}
         />
       </View>
       <View style={styles.footer}>
