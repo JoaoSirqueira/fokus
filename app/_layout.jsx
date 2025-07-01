@@ -6,17 +6,45 @@ export default function Layout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
         screenOptions={{
-          headerStyle: {backgroundColor: '#021123'},
+          headerStyle: { backgroundColor: '#021123' },
           headerTintColor: '#FFF',
-          drawerStyle: {backgroundColor: '#021123'},
-          drawerLabelStyle: {color: '#FFF'}
+          drawerStyle: { backgroundColor: '#021123' },
+          drawerLabelStyle: { color: '#FFF' }
         }}
       >
 
-        <Drawer.Screen 
+        <Drawer.Screen
+          name='index'
+          options={{
+            headerShown: false,
+            drawerItemStyle: { display: 'none' }
+          }}
+        />
+
+        <Drawer.Screen
           name='add-task/index'
-          options={{ headerShown: false }}/>
+          options={{
+            drawerItemStyle: { display: 'none' }
+          }}
+        />
+
+        <Drawer.Screen
+          name='pomodoro'
+          options={{
+            drawerLabel: 'Timer',
+            title: '',
+          }}
+        />
+
+        <Drawer.Screen
+          name='tasks/index'
+          options={{
+            drawerLabel: 'Lista de tarefas',
+            title: '',
+          }}
+        />
+
       </Drawer>
-    </GestureHandlerRootView>
+    </GestureHandlerRootView >
   );
 }
