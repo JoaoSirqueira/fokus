@@ -20,7 +20,7 @@ export default function Tasks() {
                     />
                 </View>
                 <FokusButton
-                    title={"Adicionar nova tarefa"}
+                    title="Adicionar nova tarefa"
                     icon={<IconPlus outline />}
                 />
             </View>
