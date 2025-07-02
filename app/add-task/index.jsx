@@ -1,28 +1,36 @@
-import { Pressable, SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native";
+import { Keyboard, KeyboardAvoidingView, Platform, Pressable, SafeAreaView, StyleSheet, Text, TextInput, TouchableWithoutFeedback, View } from "react-native";
 import { IconSave } from "../../components/Icons";
 
 export default function AddTask() {
     return (
-        <SafeAreaView style={styles.container}>
-            <Text style={styles.text}>
-                Adicionar uma tarefa:
-            </Text>
-            <View style={styles.inner}>
-                <Text style={styles.label}>
-                    Em que você está trabalhando?
-                </Text>
-                <TextInput
-                    style={styles.input}
-                    numberOfLines={10}
-                />
-                <Pressable style={styles.button}>
-                    <IconSave />
-                    <Text>
-                        Salvar
+        <KeyboardAvoidingView
+            style={styles.container}
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        >
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                <View style={styles.inner}>
+                    <Text style={styles.text}>
+                        Adicionar uma tarefa:
                     </Text>
-                </Pressable>
-            </View>
-        </SafeAreaView>
+                    <Text style={styles.label}>
+                        Em que você está trabalhando?
+                    </Text>
+                    <TextInput
+                        style={styles.input}
+                        numberOfLines={10}
+                        multiline={true}
+                    />
+                    <View style={styles.actions}>
+                        <Pressable style={styles.button}>
+                            <IconSave />
+                            <Text>
+                                Salvar
+                            </Text>
+                        </Pressable>
+                    </View>
+                </View>
+            </TouchableWithoutFeedback>
+        </KeyboardAvoidingView>
     );
 }
 
@@ -53,10 +61,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
         padding: 16,
         borderRadius: 8,
+        height: 100,
     },
     button: {
         flexDirection: 'row',
         alignItems: 'center',
         gap: 4,
+    },
+    actions: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end'
     }
 })
