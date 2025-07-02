@@ -15,6 +15,7 @@
    npm reset-project
    npx expo install react-native-sv 
    npx expo install @react-navigation/drawer react-native-gesture-handler react-native-reanimated
+   npx expo install @react-native-async-storage/async-storage
    ```
 
 ## Créditos
