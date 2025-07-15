@@ -68,11 +68,11 @@ export function TasksProvider({ children }) {
         })
     }
 
-    const updateTask = (id, newDescription) => {
+    const updateTask = (id, description) => {
         setTasks(oldState =>
             oldState.map(t => {
                 if (t.id == id) {
-                    return { ...t, description: newDescription }
+                    return { ...t, description: description }
                 }
                 return t
             })

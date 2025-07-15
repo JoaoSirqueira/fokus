@@ -2,9 +2,9 @@ import { Keyboard, KeyboardAvoidingView, Platform, Pressable, SafeAreaView, Styl
 import { IconSave } from "../../components/Icons";
 import { useState } from "react";
 
-export default function FormTask({ onFormSubmit }) {
+export default function FormTask({ onFormSubmit, defaultValue = '' }) {
 
-    const [description, setDescription] = useState('')
+    const [description, setDescription] = useState(defaultValue)
 
 
     const submitTask = () => {
@@ -23,7 +23,7 @@ export default function FormTask({ onFormSubmit }) {
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <View style={styles.inner}>
                     <Text style={styles.text}>
-                        Adicionar uma tarefa:
+                        {defaultValue ? "Editar" : "Adicionar"} uma tarefa:
                     </Text>
                     <Text style={styles.label}>
                         Em que você está trabalhando?
